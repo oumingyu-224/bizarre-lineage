@@ -1,54 +1,37 @@
-# SoFlo Wheelie Life Game Website
+# Bizarre Lineage Game Resource Website
 
-🎮 **Official Website**: [SoFlo Wheelie Life Official Website](https://www.soflowheelielife.dev/)
+🎮 **Official Website**: [Bizarre Lineage](https://bizarrelineage.xyz/)
 
 📖 **中文版本**: [README.md](./README.md)
 
-This is the official website project for SoFlo Wheelie Life game, built with Next.js. The website provides multiple game embeds, game information display, and optimization for search engines and AI crawlers.
+This is the resource website project for Bizarre Lineage game, built with Next.js. The website provides comprehensive game guides, codes, Stand information, Tier Lists and more to help players master this JoJo-inspired Roblox RPG.
 
 ## Project Overview
 
-SoFlo Wheelie Life is a physics-based 3D motorcycle stunt game that runs directly in browsers without downloads. This project is the official website for the game, now expanded into a multi-game platform offering multiple different types of browser games.
+Bizarre Lineage is a JoJo-inspired Roblox RPG where players unlock powerful Stands, battle bosses in Morioh, and dominate PvP combat. This website provides complete game guides, codes, wiki and other resources for players.
 
-## About the Game
+### Main Content Sections
 
-**SoFlo Wheelie Life** is an independently developed free online motorcycle stunt game featuring explosive physics-based gameplay. Unlike traditional racing games that focus on speed, SoFlo Wheelie Life emphasizes balance and stunt mechanics, creating a unique and thrilling gaming experience.
-
-### Game Highlights
-
-🎮 **Physics-Based Gameplay**: Master authentic motorcycle control with a groundbreaking physics engine designed for realistic environmental interactions and precise balance mechanics.
-
-🌍 **Urban Playground**: Perform stunts in the vibrant streets of South Florida with varied terrains and challenging obstacles.
-
-⚡ **Skill-Based Progression**: No paid advantages, just pure skill-based gameplay. Perfect your timing for perfect wheelies and stylish landings.
-
-🎯 **Easy to Learn, Hard to Master**: Intuitive controls with mouse steering, but deep mechanics reward advanced techniques and strategic thinking.
-
-### Why Play SoFlo Wheelie Life?
-
-- **Free & Unblocked**: Play instantly in your browser without downloads
-- **Cross-Platform**: Compatible with Windows, Mac, Linux, and mobile devices
-- **Unique Gameplay**: Experience physics-based motorcycle stunts like no other game
-- **Regular Updates**: Continuously improved with new features and optimizations
-
-The game delivers exciting stunt action, where balance and timing matter more than speed. Whether you're a newcomer learning the basics or a veteran mastering advanced techniques, SoFlo Wheelie Life offers consistently engaging gameplay that keeps you coming back for more.
-
-### Supported Games List
-
-1. **[SoFlo Wheelie Life](https://www.soflowheelielife.dev/)** - Main game, physics-based 3D motorcycle stunt game
-2. **[Street Wheelie](https://www.soflowheelielife.dev/street-wheelie)** - Street motorcycle stunt game
-3. **[Stickman Bike](https://www.soflowheelielife.dev/stickman-bike)** - Stickman bike game
-4. **[Wheelie Life](https://www.soflowheelielife.dev/wheelie-life)** - Motorcycle wheelie game
+1. **[Wiki](https://bizarrelineage.xyz/wiki)** - Game encyclopedia
+2. **[Codes](https://bizarrelineage.xyz/codes)** - Latest game codes
+3. **[Tier List](https://bizarrelineage.xyz/tier-list)** - Stand power rankings
+4. **[Stands](https://bizarrelineage.xyz/stands)** - Detailed Stand information
+5. **[Raids](https://bizarrelineage.xyz/raids)** - Raid Boss strategies
+6. **[Stats](https://bizarrelineage.xyz/stats)** - Stats system guide
+7. **[Skins](https://bizarrelineage.xyz/skins)** - Skin collection
+8. **[Links](https://bizarrelineage.xyz/links)** - Official links hub
+9. **[Changelog](https://bizarrelineage.xyz/changelog)** - Update logs
 
 ### Main Features
 
-- **Multi-Game Embed & Display** - Supports multiple different types of browser games
-- **Unified Game Page Template** - Each game has complete introduction, features, gameplay and FAQ
-- **Game Features, Gameplay & FAQ Introduction** - Detailed game guides and common questions
+- **Complete Game Guides** - Detailed strategies covering all aspects of the game
+- **Real-time Updated Codes** - Latest available redemption codes
+- **Stand Database** - Detailed information and acquisition methods for all Stands
+- **Tier List Rankings** - Stand power rankings based on current meta
+- **Raid Boss Strategies** - Detailed boss battle tactics
 - **Search Engine Optimization (SEO)** - Complete meta tags and structured data
-- **AI Crawler Special Content Optimization** - Dedicated llms.txt files
 - **Responsive Design** - Supports various devices and screen sizes
-- **Game Recommendation System** - Recommends other games on each game page
+- **Community Resource Integration** - Official Discord, Trello and other links
 
 ## Tech Stack
 
@@ -66,18 +49,43 @@ The game delivers exciting stunt action, where balance and timing matter more th
 ```
 /
 ├── app/                    # Next.js App Directory (App Router)
-│   ├── street-wheelie/     # Street Wheelie game page
-│   ├── stickman-bike/      # Stickman Bike game page
-│   ├── wheelie-life/       # Wheelie Life game page
-│   ├── games/              # Game list and data configuration
+│   ├── wiki/               # Wiki encyclopedia page
+│   ├── codes/              # Game codes page
+│   ├── tier-list/          # Tier List page
+│   ├── stands/             # Stand information page
+│   ├── raids/              # Raid strategies page
+│   ├── stats/              # Stats system page
+│   ├── skins/              # Skins page
+│   ├── links/              # Links hub page
+│   ├── changelog/          # Changelog page
 │   ├── about/              # About page
 │   ├── contact/            # Contact page
 │   ├── privacy-policy/     # Privacy policy page
 │   ├── terms-of-service/   # Terms of service page
 │   ├── layout.tsx          # Global layout
-│   ├── page.tsx            # Homepage (SoFlo Wheelie Life)
-│   ├── schema.ts           # Structured data configuration
+│   ├── page.tsx            # Homepage
 │   └── globals.css         # Global styles
+├── components/             # React components
+│   ├── layout/             # Layout components (Header, Footer)
+│   ├── home/               # Home components (FAQ, Comments)
+│   └── ui/                 # Base UI components (based on Radix UI)
+├── content/                # Content configuration files
+│   ├── site.ts             # Site basic configuration
+│   ├── navigation.ts       # Navigation configuration
+│   └── pages/              # Page content configurations
+├── config/                 # Configuration files
+│   ├── layout.ts           # Layout configuration
+│   └── theme.ts            # Theme configuration
+├── data/                   # Data files
+│   ├── stands.ts           # Stand data
+│   ├── raids.ts            # Raid data
+│   └── codes.ts            # Code data
+├── hooks/                  # Custom React Hooks
+├── lib/                    # Utility functions
+├── public/                 # Static assets
+│   ├── logo.png            # Website logo
+│   └── favicon.ico         # Website icon
+└── types/                  # TypeScript type definitions
 ├── components/             # React component library
 │   ├── game-section/       # Game display components
 │   ├── layout/             # Layout components (Header, Footer)
@@ -209,11 +217,11 @@ To add new games, follow these steps:
 ### Related Links and Resources
 
 #### Official Pages
-- 🏠 **Homepage**: [SoFlo Wheelie Life Official Website](https://www.soflowheelielife.dev/)
-- 📞 **Contact Us**: [Contact Us](https://www.soflowheelielife.dev/contact)
-- ℹ️ **About Us**: [About Us](https://www.soflowheelielife.dev/about)
-- 🔒 **Privacy Policy**: [Privacy Policy](https://www.soflowheelielife.dev/privacy-policy)
-- 📋 **Terms of Service**: [Terms of Service](https://www.soflowheelielife.dev/terms-of-service)
+- 🏠 **Homepage**: [Bizarre Lineage](https://bizarrelineage.xyz/)
+- 📞 **Contact Us**: [Contact Us](https://bizarrelineage.xyz/contact)
+- ℹ️ **About Us**: [About Us](https://bizarrelineage.xyz/about)
+- 🔒 **Privacy Policy**: [Privacy Policy](https://bizarrelineage.xyz/privacy-policy)
+- 📋 **Terms of Service**: [Terms of Service](https://bizarrelineage.xyz/terms-of-service)
 
 #### External Links (Footer Quick Links)
 - 📝 **Telegram**: [Telegram Channel](https://t.me/isaac_free_games)
@@ -276,4 +284,4 @@ vercel env add NEXT_PUBLIC_GA_ID
 
 ## License
 
-© 2025 SoFlo Wheelie Life. All rights reserved.
+© 2025 Bizarre Lineage. All rights reserved.

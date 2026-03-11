@@ -1,31 +1,37 @@
-# SoFlo Wheelie Life 游戏网站
+# Bizarre Lineage 游戏资源网站
 
-🎮 **官方网站**: [SoFlo Wheelie Life 官方网站](https://www.soflowheelielife.dev/)
+🎮 **官方网站**: [Bizarre Lineage](https://bizarrelineage.xyz/)
 
 📖 **English Version**: [README_EN.md](./README_EN.md)
 
-这是 SoFlo Wheelie Life 游戏的官方网站项目，基于 Next.js 构建。该网站提供多款游戏嵌入、游戏信息展示以及针对搜索引擎和 AI 爬虫的优化。
+这是 Bizarre Lineage 游戏的资源网站项目，基于 Next.js 构建。该网站提供全面的游戏指南、代码、Stand 信息、Tier List 等内容，帮助玩家掌握这款 JoJo 风格的 Roblox RPG 游戏。
 
 ## 项目概述
 
-SoFlo Wheelie Life 是一款基于物理引擎的摩托车特技游戏，可直接在浏览器中运行，无需下载安装。本项目是游戏的官方网站，现已扩展为多游戏平台，提供多种不同类型的浏览器游戏。
+Bizarre Lineage 是一款受 JoJo 启发的 Roblox RPG 游戏，玩家可以解锁强大的 Stand、在 Morioh 挑战 Boss、参与 PvP 战斗。本网站为玩家提供完整的游戏攻略、代码、Wiki 等资源。
 
-### 支持的游戏列表
+### 主要内容板块
 
-1. **[SoFlo Wheelie Life](https://www.soflowheelielife.dev/)** - 主要游戏，物理引擎3D动作游戏
-2. **[Street Wheelie](https://www.soflowheelielife.dev/street-wheelie)** - 街头摩托车特技游戏
-3. **[Stickman Bike](https://www.soflowheelielife.dev/stickman-bike)** - 火柴人自行车游戏
-4. **[Wheelie Life](https://www.soflowheelielife.dev/wheelie-life)** - 摩托车翘头游戏
+1. **[Wiki](https://bizarrelineage.xyz/wiki)** - 游戏百科全书
+2. **[Codes](https://bizarrelineage.xyz/codes)** - 最新游戏代码
+3. **[Tier List](https://bizarrelineage.xyz/tier-list)** - Stand 强度排行
+4. **[Stands](https://bizarrelineage.xyz/stands)** - Stand 详细信息
+5. **[Raids](https://bizarrelineage.xyz/raids)** - Raid Boss 攻略
+6. **[Stats](https://bizarrelineage.xyz/stats)** - 属性系统指南
+7. **[Skins](https://bizarrelineage.xyz/skins)** - 皮肤收藏
+8. **[Links](https://bizarrelineage.xyz/links)** - 官方链接汇总
+9. **[Changelog](https://bizarrelineage.xyz/changelog)** - 更新日志
 
 ### 主要功能
 
-- **多游戏嵌入与展示** - 支持多种不同类型的浏览器游戏
-- **统一游戏页面模板** - 每个游戏都有完整的介绍、特性、玩法和FAQ
-- **游戏特性、玩法和 FAQ 介绍** - 详细的游戏指南和常见问题解答
-- **针对搜索引擎优化 (SEO)** - 完整的meta标签和结构化数据
-- **针对 AI 爬虫的特殊内容优化** - 专用的llms.txt文件
+- **完整的游戏指南** - 涵盖游戏各个方面的详细攻略
+- **实时更新的代码** - 最新可用的游戏兑换码
+- **Stand 数据库** - 所有 Stand 的详细信息和获取方法
+- **Tier List 排行** - 基于当前 Meta 的 Stand 强度排名
+- **Raid Boss 攻略** - 详细的 Boss 战斗策略
+- **针对搜索引擎优化 (SEO)** - 完整的 meta 标签和结构化数据
 - **响应式设计** - 支持各种设备和屏幕尺寸
-- **游戏推荐系统** - 在每个游戏页面推荐其他游戏
+- **社区资源整合** - Discord、Trello 等官方链接
 
 ## 技术栈
 
@@ -43,53 +49,44 @@ SoFlo Wheelie Life 是一款基于物理引擎的摩托车特技游戏，可直�
 ```
 /
 ├── app/                    # Next.js 应用目录 (App Router)
-│   ├── street-wheelie/     # Street Wheelie 游戏页面
-│   ├── stickman-bike/      # Stickman Bike 游戏页面
-│   ├── wheelie-life/       # Wheelie Life 游戏页面
-│   ├── games/              # 游戏列表和数据配置
+│   ├── wiki/               # Wiki 百科页面
+│   ├── codes/              # 游戏代码页面
+│   ├── tier-list/          # Tier List 页面
+│   ├── stands/             # Stand 信息页面
+│   ├── raids/              # Raid 攻略页面
+│   ├── stats/              # 属性系统页面
+│   ├── skins/              # 皮肤页面
+│   ├── links/              # 链接汇总页面
+│   ├── changelog/          # 更新日志页面
 │   ├── about/              # 关于页面
 │   ├── contact/            # 联系页面
 │   ├── privacy-policy/     # 隐私政策页面
 │   ├── terms-of-service/   # 服务条款页面
 │   ├── layout.tsx          # 全局布局
-│   ├── page.tsx            # 首页 (SoFlo Wheelie Life)
-│   ├── schema.ts           # 结构化数据配置
+│   ├── page.tsx            # 首页
 │   └── globals.css         # 全局样式
 ├── components/             # React 组件库
-│   ├── game-section/       # 游戏展示组件
 │   ├── layout/             # 布局组件 (Header, Footer)
-│   ├── templates/          # 页面模板 (GamePageTemplate)
-│   ├── home/               # 首页组件
-│   ├── features/           # 游戏特性组件
-│   ├── what-is/            # 游戏介绍组件
-│   ├── how-to-play/        # 玩法说明组件
-│   ├── faq/                # FAQ组件
-│   ├── other-games/        # 其他游戏推荐组件
-│   ├── rating/             # 评分组件
+│   ├── home/               # 首页组件 (FAQ, Comments)
 │   └── ui/                 # 基础UI组件 (基于Radix UI)
+├── content/                # 内容配置文件
+│   ├── site.ts             # 站点基本配置
+│   ├── navigation.ts       # 导航配置
+│   └── pages/              # 各页面内容配置
 ├── config/                 # 配置文件
-│   ├── site.ts/js          # 站点基本配置
-│   ├── content.ts          # 游戏内容配置
 │   ├── layout.ts           # 布局配置
 │   └── theme.ts            # 主题配置
+├── data/                   # 数据文件
+│   ├── stands.ts           # Stand 数据
+│   ├── raids.ts            # Raid 数据
+│   └── codes.ts            # 代码数据
 ├── hooks/                  # 自定义React Hooks
 ├── lib/                    # 工具函数库
 ├── public/                 # 静态资源
-│   ├── assets/             # 图片和其他资源
-│   │   ├── street-wheelie/ # Street Wheelie 相关图片
-│   │   ├── stickman-bike/  # Stickman Bike 相关图片
-│   │   ├── wheelie-life/   # Wheelie Life 相关图片
-│   │   └── img/            # 站点通用图片
-│   ├── game/               # 游戏文件目录
-│   │   ├── soFlowheelielife/  # SoFlo Wheelie Life 游戏文件
-│   │   ├── streetWheelie/     # Street Wheelie 游戏文件
-│   │   ├── stickmanbike/      # Stickman Bike 游戏文件
-│   │   └── wheelielife/       # Wheelie Life 游戏文件
-│   ├── llms.txt            # AI 爬虫专用内容摘要
-│   ├── llms-full.txt       # AI 爬虫专用完整内容
-│   ├── robots.txt          # 搜索引擎爬虫规则
-│   └── sitemap.xml         # 网站地图
-├── next.config.js          # Next.js 配置 (包含游戏路由重写)
+│   ├── logo.png            # 网站Logo
+│   └── favicon.ico         # 网站图标
+├── types/                  # TypeScript 类型定义
+├── next.config.js          # Next.js 配置
 ├── next-sitemap.config.js  # Sitemap 和 robots.txt 配置
 ├── tailwind.config.ts      # Tailwind CSS 配置
 ├── tsconfig.json           # TypeScript 配置
@@ -186,11 +183,11 @@ npm run clean-sitemap
 ### 相关链接和资源
 
 #### 官方页面
-- 🏠 **主页**: [SoFlo Wheelie Life 官方网站](https://www.soflowheelielife.dev/)
-- 📞 **联系我们**: [联系我们](https://www.soflowheelielife.dev/contact)
-- ℹ️ **关于我们**: [关于我们](https://www.soflowheelielife.dev/about)
-- 🔒 **隐私政策**: [隐私政策](https://www.soflowheelielife.dev/privacy-policy)
-- 📋 **服务条款**: [服务条款](https://www.soflowheelielife.dev/terms-of-service)
+- 🏠 **主页**: [Bizarre Lineage](https://bizarrelineage.xyz/)
+- 📞 **联系我们**: [联系我们](https://bizarrelineage.xyz/contact)
+- ℹ️ **关于我们**: [关于我们](https://bizarrelineage.xyz/about)
+- 🔒 **隐私政策**: [隐私政策](https://bizarrelineage.xyz/privacy-policy)
+- 📋 **服务条款**: [服务条款](https://bizarrelineage.xyz/terms-of-service)
 
 #### 外部链接 (Footer Quick Links)
 - 📝 **Telegram**: [Telegram 频道](https://t.me/isaac_free_games)
@@ -253,4 +250,4 @@ vercel env add NEXT_PUBLIC_GA_ID
 
 ## 许可证
 
-© 2025 SoFlo Wheelie Life. 保留所有权利。
+© 2025 Bizarre Lineage. 保留所有权利。

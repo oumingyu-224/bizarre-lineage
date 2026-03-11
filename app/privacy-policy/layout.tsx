@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
+import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - SoFlo Wheelie Life',
-  description: 'Privacy Policy - Learn how we collect, use, and protect your information.',
+  title: 'Privacy Policy',
+  description: `Privacy Policy for ${siteConfig.name} - Learn how we collect, use, and protect your information.`,
   alternates: {
     canonical: '/privacy-policy',
   },

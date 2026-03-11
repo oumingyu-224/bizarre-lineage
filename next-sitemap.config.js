@@ -1,5 +1,5 @@
 // @ts-check
-const { siteConfig } = require('./config/site');
+const { siteConfig } = require('./content/site');
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
   changefreq: 'daily',
   priority: 0.9,
   outDir: './public',
-  generateIndexSitemap: false,  // 禁用索引 sitemap
+  generateIndexSitemap: false,
   transform: async (config, path) => {
     let priority = 0.9;
     let changefreq = 'monthly';
@@ -16,8 +16,14 @@ module.exports = {
     if (path === '/' || path === '') {
       priority = 1.0;
       changefreq = 'daily';
-    } else if (path === '/privacy-policy' || path === '/terms-of-service' || path === '/about' || path === '/contact') {
-      priority = 0.8;
+    } else if (['/stands', '/codes', '/tier-list', '/wiki'].includes(path)) {
+      priority = 0.95;
+      changefreq = 'daily';
+    } else if (['/raids', '/stats', '/skins', '/changelog', '/links'].includes(path)) {
+      priority = 0.85;
+      changefreq = 'weekly';
+    } else if (['/privacy-policy', '/terms-of-service', '/about', '/contact'].includes(path)) {
+      priority = 0.7;
       changefreq = 'monthly';
     }
 
@@ -31,13 +37,10 @@ module.exports = {
   },
   robotsTxtOptions: {
     policies: [
-      // 常规搜索引擎规则
       {
         userAgent: '*',
         allow: '/',
       },
-
-      // 专用 AI 爬虫 - 仅允许访问 llms 文件
       {
         userAgent: 'GPTBot',
         disallow: '/',

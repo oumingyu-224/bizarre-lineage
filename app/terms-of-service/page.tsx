@@ -1,19 +1,14 @@
-import React from 'react';
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+import { siteConfig } from "@/content/site";
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <main className="container mx-auto">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <h1 className="text-3xl text-center font-bold mb-6">Terms of Service</h1>
 
-      <main className="container mx-auto">
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          <h2 className="text-3xl text-center font-bold mb-6">Terms of Service</h2>
-
-          <div className="space-y-6">
-            <section>
-              <h2 className="text-2xl font-semibold mb-3">1. Acceptance of Terms</h2>
+        <div className="space-y-6">
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">1. Acceptance of Terms</h2>
               <p>
                 By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
@@ -22,7 +17,7 @@ const TermsOfService = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-3">2. Use License</h2>
               <p className="mb-4">
-                Permission is granted to temporarily access the games and materials (information or software) on our website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                Permission is granted to temporarily access the guides and materials (information or content) on our website for personal, non-commercial viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
               </p>
               <ul className="list-disc pl-6 mb-4">
                 <li>Modify or copy the materials</li>
@@ -94,21 +89,13 @@ const TermsOfService = () => {
                 If you have any questions about these Terms of Service, please contact us:
               </p>
               <p className="mt-2">
-                By email: support@soflowheelielife.dev
+                By email: {siteConfig.email}
               </p>
             </section>
           </div>
         </div>
       </main>
-
-      <Footer />
-    </div>
   );
 };
 
 export default TermsOfService;
-
-
-
-
-

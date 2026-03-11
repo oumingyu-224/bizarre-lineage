@@ -1,56 +1,48 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/content/site";
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <main className="container mx-auto">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <h1 className="text-4xl text-center font-bold mb-8">About {siteConfig.name}</h1>
 
-      <main className="container mx-auto">
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          <h2 className="text-4xl text-center font-bold mb-8">About {siteConfig.name}</h2>
+        <div className="space-y-6 text-lg">
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">Our Mission</h2>
+            <p>
+              At {siteConfig.name}, our mission is to provide comprehensive guides, resources, and community support for Bizarre Lineage players. We believe in helping players master the game through accurate information, detailed guides, and up-to-date content. We are passionate about creating a hub where players can find everything they need to succeed in Bizarre Lineage.
+            </p>
+          </section>
 
-          <div className="space-y-6 text-lg">
-            <section>
-              <h2 className="text-2xl font-semibold mb-3">Our Mission</h2>
-              <p>
-                At {siteConfig.name}, our mission is to provide fun, accessible, and engaging browser-based gaming experiences for everyone. We believe in the power of games to bring joy, challenge minds, and connect people. We are passionate about creating innovative and entertaining games that can be played instantly, without downloads or barriers.
-              </p>
-            </section>
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">Who We Are</h2>
+            <p>
+              We are a dedicated team of Bizarre Lineage enthusiasts and content creators who love the JoJo-inspired Roblox RPG. Our journey started with a passion for the game and a desire to help the community grow. {siteConfig.name} is the result of countless hours researching game mechanics, testing builds, and compiling the most accurate information available.
+            </p>
+            <p className="mt-4">
+              From Stand tier lists to raid boss strategies, we cover every aspect of Bizarre Lineage to help both new and veteran players improve their gameplay and enjoy the game to its fullest.
+            </p>
+          </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-3">Who We Are</h2>
-              <p>
-                We are a small, dedicated team of game developers, designers, and enthusiasts who love creating unique and memorable gaming moments. Our journey started with a simple idea: to make games that we ourselves would love to play and share with the world. {siteConfig.name} is the culmination of our passion and hard work.
-              </p>
-              <p className="mt-4">
-                While we started with the chaotic fun of physics-based games like SoFlo Wheelie Life, we are always exploring new genres and ideas to expand our collection and offer a diverse range of entertainment.
-              </p>
-            </section>
-            
-            <section>
-              <h2 className="text-2xl font-semibold mb-3">Our Commitment</h2>
-              <p>
-                We are committed to providing a safe and enjoyable environment for our players. All our games are free to play directly in your browser, with no hidden costs or intrusive requirements. We value your feedback and encourage you to reach out to us with any suggestions or comments.
-              </p>
-            </section>
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">Our Commitment</h2>
+            <p>
+              We are committed to providing accurate, up-to-date information for the Bizarre Lineage community. All our guides are regularly updated to reflect the current game meta, new Stand releases, and balance changes. We value community feedback and encourage players to join our Discord to share tips, strategies, and suggestions.
+            </p>
+          </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-3">Contact Us</h2>
-              <p>
-                Have questions, feedback, or just want to say hello? We'd love to hear from you!
-              </p>
-              <p className="mt-2">
-                You can reach us by email at: <a href={`mailto:${siteConfig.email}`} className="text-primary hover:underline">{siteConfig.email}</a>
-              </p>
-            </section>
-          </div>
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">Contact Us</h2>
+            <p>
+              Have questions, feedback, or want to contribute to our guides? We'd love to hear from you!
+            </p>
+            <p className="mt-2">
+              You can reach us by email at: <a href={`mailto:${siteConfig.email}`} className="text-primary hover:underline">{siteConfig.email}</a>
+            </p>
+          </section>
         </div>
-      </main>
-
-      <Footer />
-    </div>
+      </div>
+    </main>
   );
 };
 

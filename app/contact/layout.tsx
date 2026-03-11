@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: `Contact Us - ${siteConfig.name}`,
-  description: `Get in touch with the team at ${siteConfig.name}. We'd love to hear from you!`,
+  title: `Contact Us`,
+  description: `Get in touch with the ${siteConfig.name} team. We'd love to hear your feedback and suggestions!`,
   alternates: {
     canonical: '/contact',
   },

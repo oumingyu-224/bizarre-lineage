@@ -1,18 +1,14 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+import { siteConfig } from "@/content/site";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <main className="container mx-auto">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <h1 className="text-3xl text-center font-bold mb-6">Privacy Policy</h1>
 
-      <main className="container mx-auto">
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          <h2 className="text-3xl text-center font-bold mb-6">Privacy Policy</h2>
-
-          <div className="space-y-6">
-            <section>
-              <h2 className="text-2xl font-semibold mb-3">1. Introduction</h2>
+        <div className="space-y-6">
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">1. Introduction</h2>
               <p>
                 Welcome to our website. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we handle your personal data when you visit our website and tell you about your privacy rights.
               </p>
@@ -21,7 +17,7 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-3">2. Information We Collect</h2>
               <p className="mb-4">
-                Like most website operators, we collect non-personally-identifying information that web browsers and servers typically make available. This information includes:
+                Like most websites, we collect non-personally-identifying information that web browsers and servers typically make available. This information includes:
               </p>
               <ul className="list-disc pl-6 mb-4">
                 <li>Browser type and version</li>
@@ -33,10 +29,10 @@ const PrivacyPolicy = () => {
                 <li>Device type</li>
               </ul>
               <p className="mb-4">
-                Our purpose in collecting non-personally identifying information is to better understand how our visitors use the website. This helps us improve our services and enhance the gaming experience for all users.
+                Our purpose in collecting non-personally identifying information is to better understand how our visitors use the website. This helps us improve our guides, update content, and enhance the user experience for the Bizarre Lineage community.
               </p>
               <p>
-                From time to time, we may release non-personally-identifying information in the aggregate, for example, by publishing reports on trends in website usage and game popularity. This aggregated information does not identify individual users and is used solely for analytical purposes.
+                From time to time, we may release non-personally-identifying information in the aggregate, for example, by publishing reports on trends in website usage. This aggregated information does not identify individual users and is used solely for analytical purposes.
               </p>
             </section>
 
@@ -103,19 +99,13 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
               <p className="mt-2">
-                By email: support@soflowheelielife.dev
+                By email: {siteConfig.email}
               </p>
             </section>
           </div>
         </div>
       </main>
+    );
+  };
 
-      <Footer />
-    </div>
-  );
-};
-
-export default PrivacyPolicy;
-
-
-
+  export default PrivacyPolicy;

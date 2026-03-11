@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
+import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - SoFlo Wheelie Life',
-  description: 'Terms of Service - Please read these terms carefully before using our service.',
+  title: 'Terms of Service',
+  description: `Terms of Service for ${siteConfig.name} - Please read these terms carefully before using our service.`,
   alternates: {
     canonical: '/terms-of-service',
   },

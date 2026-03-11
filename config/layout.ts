@@ -8,7 +8,7 @@ export const layout = {
       padding: "px-4 md:px-8",
     },
     logo: {
-      src: "/assets/img/android-chrome-192x192.png", // 使用 192x192 的图片
+      src: "/assets/img/logo.png", // 使用 192x192 的图片
       size: "w-12 h-12", // 增加到 48x48 显示尺寸
     }
   },

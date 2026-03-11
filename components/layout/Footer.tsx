@@ -1,15 +1,11 @@
+"use client";
+
 import Link from "next/link";
-import { Facebook, Twitter, LucideIcon } from "lucide-react";
 import { theme } from "@/config/theme";
-import { content } from "@/config/content";
+import { navigationConfig } from "@/content/navigation";
+import { siteConfig } from "@/content/site";
 import { layout } from "@/config/layout";
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/config/site";
-
-const SocialIcons: Record<string, LucideIcon> = {
-  Facebook,
-  Twitter,
-};
 
 export function Footer() {
   if (!layout.footer.isVisible) return null;
@@ -31,150 +27,109 @@ export function Footer() {
       <div className={containerClassName}>
         <div className={gridClassName}>
           {/* About Section */}
-          {layout.footer.sections.about && (
-            <div>
-              <h3 className={cn("font-semibold", theme.footer.spacing.sectionTitle)}>
-                {content.footer.about.title}
-              </h3>
-              <p className={theme.footer.colors.mutedText}>
-                {content.footer.about.description}
-              </p>
-            </div>
-          )}
-
-          {/* Games Section */}
-          {layout.footer.sections.games && (
-            <div>
-              <h3 className={cn("font-bold", theme.footer.spacing.sectionTitle)}>
-                {content.footer.games.title}
-              </h3>
-              <ul className={theme.footer.spacing.linkList}>
-                {content.footer.games.links.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      className={cn(
-                        "text-sm",
-                        theme.footer.colors.mutedText,
-                        theme.footer.colors.hover
-                      )}
-                      target="_blank"
-                      rel="noopener"  // 只使用 noopener 以传递权重
-                    >
-                      {link.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Quick Links Section */}
-          {layout.footer.sections.quickLinks && (
-            <div>
-              <h3 className={cn("font-bold", theme.footer.spacing.sectionTitle)}>
-                {content.footer.quickLinks.title}
-              </h3>
-              <ul className={theme.footer.spacing.linkList}>
-                {content.footer.quickLinks.links.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      className={cn(
-                        "text-sm",
-                        theme.footer.colors.mutedText,
-                        theme.footer.colors.hover
-                      )}
-                      target="_blank"
-                      rel="noopener"  // 只使用 noopener 以传递权重
-                    >
-                      {link.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Social Links Section */}
-          {layout.footer.sections.social && (
-            <div>
-              <h3 className={cn("font-bold", theme.footer.spacing.sectionTitle)}>
-                {content.footer.social.title}
-              </h3>
-              <div className="space-y-4">
-                {content.footer.social.links.map((link) => {
-                  const Icon = SocialIcons[link.icon];
-                  return (
-                    <div key={link.href} className="flex items-center space-x-2">
-                      <Icon className="h-5 w-5" />
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"  // 使用 noreferrer 不传递权重
-                        className={cn(
-                          "text-sm",
-                          theme.footer.colors.mutedText,
-                          theme.footer.colors.hover
-                        )}
-                      >
-                        {link.icon}
-                      </a>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Copyright and Legal Section - 重新设计的部分 */}
-        <div className="mt-8 pt-8 border-t">
-          {/* Updated Copyright and Legal Links Section */}
-          <div className="text-center">
-            {/* Copyright Line */}
-            <p className={cn("text-sm", theme.footer.colors.mutedText, "mb-2 md:mb-4")}>
-              © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+          <div>
+            <h3 className={cn("font-semibold", theme.footer.spacing.sectionTitle)}>
+              About {siteConfig.name}
+            </h3>
+            <p className={theme.footer.colors.mutedText}>
+              {siteConfig.description}
             </p>
-
-            {/* Links Line */}
-            {(() => {
-              const allLegalLinks = content.footer.legal.links;
-              const desiredOrder = ["About Us", "Privacy Policy", "Terms of Service", "Contact Us"];
-              const orderedLinks = desiredOrder
-                .map(text => allLegalLinks.find(link => link.text === text))
-                .filter(link => link !== undefined) as { text: string; href: string }[];
-
-              if (layout.footer.sections.legal && orderedLinks.length > 0) {
-                return (
-                  <nav aria-label="Footer legal links">
-                    <ul className="flex flex-wrap justify-center">
-                      {orderedLinks.map((link, index) => (
-                        <li key={link.href} className="flex items-center">
-                          <Link
-                            href={link.href}
-                            className={cn(
-                              "text-sm",
-                              theme.footer.colors.mutedText,
-                              theme.footer.colors.hover,
-                              "px-2" // Add padding for spacing around pipes
-                            )}
-                          >
-                            {link.text}
-                          </Link>
-                          {index < orderedLinks.length - 1 && (
-                            <span className={cn("text-sm", theme.footer.colors.mutedText)} aria-hidden="true">|</span>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
-                );
-              }
-              return null;
-            })()}
           </div>
 
+          {/* Quick Links Section */}
+          <div>
+            <h3 className={cn("font-bold", theme.footer.spacing.sectionTitle)}>
+              Quick Links
+            </h3>
+            <ul className={theme.footer.spacing.linkList}>
+              {navigationConfig.footerNav.quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      "text-sm",
+                      theme.footer.colors.mutedText,
+                      theme.footer.colors.hover
+                    )}
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal Section */}
+          <div>
+            <h3 className={cn("font-bold", theme.footer.spacing.sectionTitle)}>
+              Legal
+            </h3>
+            <ul className={theme.footer.spacing.linkList}>
+              {navigationConfig.footerNav.legal.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      "text-sm",
+                      theme.footer.colors.mutedText,
+                      theme.footer.colors.hover
+                    )}
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Community Links */}
+          <div>
+            <h3 className={cn("font-bold", theme.footer.spacing.sectionTitle)}>
+              Community
+            </h3>
+            <ul className={theme.footer.spacing.linkList}>
+              <li>
+                <a
+                  href={siteConfig.robloxGameUrl}
+                  className={cn(
+                    "text-sm",
+                    theme.footer.colors.mutedText,
+                    theme.footer.colors.hover
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Play on Roblox
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteConfig.discordUrl}
+                  className={cn(
+                    "text-sm",
+                    theme.footer.colors.mutedText,
+                    theme.footer.colors.hover
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Discord Server
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t mt-8 pt-8">
+          <div className="text-center">
+            <p className={cn("text-sm", theme.footer.colors.mutedText)}>
+              © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+            </p>
+            <p className={cn("text-sm", theme.footer.colors.mutedText)}>
+              Wiki, guides, and resources for the Roblox game.
+            </p>
+          </div>
         </div>
       </div>
 

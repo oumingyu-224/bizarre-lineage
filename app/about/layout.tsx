@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import { siteConfig } from "@/config/site"; // Assuming siteConfig provides the domain/name
+import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: `About Us - ${siteConfig.name}`,
-  description: `Learn more about ${siteConfig.name}, our mission, and the team behind the games.`,
+  title: `About Us`,
+  description: `Learn more about ${siteConfig.name}, our mission to provide comprehensive guides, resources, and community support for Bizarre Lineage players.`,
   alternates: {
     canonical: '/about',
   },
