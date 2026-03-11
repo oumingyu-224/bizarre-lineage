@@ -54,7 +54,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const gaId = 'G-NCV73ESFSG';
+  const gaId = 'G-PQML37X16Q';
 
   return (
     <html lang="en">
