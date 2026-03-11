@@ -1,0 +1,123 @@
+# SoFlo Wheelie Life - Comprehensive Game Information
+
+> SoFlo Wheelie Life is a free online browser game where you perform motorcycle stunts and wheelies in a physics-based 3D action environment. Play instantly without download, directly in your web browser.
+
+## Game Overview
+
+SoFlo Wheelie Life is a motorcycle stunt game featuring physics-based gameplay. Unlike traditional racing games, SoFlo Wheelie Life focuses on balance and trick mechanics, creating a unique gaming experience centered around performing wheelies and stunts in the streets of South Florida.
+
+The game offers multiple distinct environments representing areas of South Florida. Each map provides unique strategic opportunities and terrain challenges. Players must master balance and timing to perform successful wheelies and stunts.
+
+While the learning curve may be steep for newcomers, the game's physics system delivers a deeply satisfying experience once mastered. The game requires no downloads and runs directly in modern web browsers, making it accessible from virtually any device with sufficient processing power.
+
+## Game Versions
+
+### SoFlo Wheelie Life
+The main version features the complete physics-based motorcycle stunt experience. This version includes:
+- Full 3D environments representing South Florida locations
+- Complete physics engine with realistic bike balance and momentum effects
+- Single-player mode with various challenges
+- High score tracking and achievements
+- Optimized performance for browser-based gameplay
+
+URL: https://www.soflowheelielife.dev
+
+### Street Wheelie
+A street motorcycle stunt game with challenging levels:
+- Urban environment challenges
+- Complex trick combinations
+- Progressive difficulty system
+- Unique obstacle courses
+- Browser-based, no-download, unblocked gameplay
+
+URL: https://www.soflowheelielife.dev/street-wheelie
+
+### Stickman Bike
+A stickman bicycle game with physics-based challenges:
+- Minimalist stickman character
+- Bicycle physics challenges
+- Varied terrain and obstacles
+- Simple but addictive gameplay
+- Browser-based, no-download, unblocked gameplay
+
+URL: https://www.soflowheelielife.dev/stickman-bike
+
+### Wheelie Life
+Classic motorcycle wheelie game with multiple tracks:
+- Traditional wheelie gameplay
+- Multiple track environments
+- Score-based challenges
+- Intuitive controls
+- Browser-based, no-download, unblocked gameplay
+
+URL: https://www.soflowheelielife.dev/wheelie-life
+
+## How To Play
+
+### Controls
+- Arrow Keys: Movement controls for balancing and steering
+- Up Arrow: Accelerate and lift front wheel for wheelie
+- Down Arrow: Brake and shift weight forward
+- Left/Right Arrows: Steer the motorcycle
+- Space Bar: Perform special tricks (when in air)
+
+### Gameplay Tips
+1. Master balance by gradually lifting the front wheel
+2. Use throttle control to maintain wheelie balance
+3. Time your landings for smooth transitions
+4. Learn each environment's unique features
+5. Practice trick combinations for higher scores
+
+Detailed guide: https://www.soflowheelielife.dev/#how-to-play
+
+## Technical Requirements
+
+### Minimum Requirements
+- Browser: Chrome 80+, Firefox 75+, Edge 80+
+- RAM: 4GB
+- Processor: Dual-core 2.0 GHz
+- Graphics: Updated drivers with WebGL support
+- Internet: Stable connection (2 Mbps+)
+
+### Recommended Requirements
+- Browser: Latest Chrome or Firefox
+- RAM: 8GB
+- Processor: Quad-core 2.5 GHz
+- Graphics: Dedicated GPU with updated drivers
+- Internet: 5 Mbps+ connection
+
+## Frequently Asked Questions
+
+### Is SoFlo Wheelie Life difficult for beginners?
+The game has a learning curve due to its physics-based mechanics. New players should expect to spend 30-60 minutes mastering the basic controls. The tutorial mode helps ease this process, and starting with easier levels can help build skills progressively.
+
+### Does the game require installation?
+No. SoFlo Wheelie Life runs entirely in your web browser. There are no downloads, installations, or plugins required. Simply visit the website and start playing immediately.
+
+### Is SoFlo Wheelie Life free to play?
+Yes, the game is completely free. There are no paywalls, premium features, or in-game purchases. All game content is accessible to all players.
+
+### What makes SoFlo Wheelie Life different from other online games?
+The game's unique physics engine creates gameplay focused on balance and trick performance rather than traditional racing or combat. This creates a unique and challenging experience focused on skill development.
+
+Complete FAQ: https://www.soflowheelielife.dev/#faq
+
+## Related Resources
+
+### Contact Us
+Get in touch with the development team for feedback or support.
+URL: https://www.soflowheelielife.dev/contact
+
+### Other Free Online Games
+Discover more browser-based games that require no download.
+URL: https://www.soflowheelielife.dev/#other-games
+
+## Legal Information
+
+### Privacy Policy
+Our privacy policy details how we collect, use, and protect user data. The game collects minimal information required for gameplay functionality.
+URL: https://www.soflowheelielife.dev/privacy-policy
+
+### Terms of Service
+Our terms outline the rules and guidelines for using the SoFlo Wheelie Life website and game.
+URL: https://www.soflowheelielife.dev/terms-of-service
