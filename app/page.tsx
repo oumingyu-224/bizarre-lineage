@@ -25,19 +25,6 @@ export default function HomePage() {
           {homeContent.hero.description}
         </p>
 
-        {/* YouTube Video Embed */}
-        <div className="mb-8 flex justify-center">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/aU_TonQzrXQ?si=uxOFBiZGcNGEeVqx&start=1"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            className="rounded-lg shadow-lg max-w-full"
-            style={{ aspectRatio: '16/9' }}
-          />
-        </div>
-
         <div className="flex gap-4 justify-center">
           <Link
             href={homeContent.hero.cta.primary.href}

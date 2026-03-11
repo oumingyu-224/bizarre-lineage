@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { standsContent } from '@/content/pages/stands';
-import { getStandsByTier } from '@/data/stands';
+import { getStandsByRarityCategory } from '@/data/stands';
 
 export const metadata: Metadata = {
   title: standsContent.seo.title,
@@ -20,7 +20,7 @@ export default function StandsPage() {
       {/* Stand Categories */}
       <div className="grid gap-8">
         {standsContent.categories.map((category) => {
-          const stands = getStandsByTier(category.tier);
+          const stands = getStandsByRarityCategory(category.rarity);
           return (
             <section key={category.id}>
               <h2 className="text-2xl font-semibold mb-4" style={{ color: category.color }}>
@@ -43,7 +43,7 @@ export default function StandsPage() {
                 ) : (
                   <div className="bg-card p-6 rounded-lg border col-span-full">
                     <p className="text-center text-muted-foreground">
-                      {category.tier} tier stands coming soon
+                      {category.rarity} tier stands coming soon
                     </p>
                   </div>
                 )}

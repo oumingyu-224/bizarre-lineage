@@ -335,3 +335,7 @@ export function getStandsByTier(tier: Stand['tier']): Stand[] {
 export function getStandById(id: string): Stand | undefined {
   return standsData.find(stand => stand.id === id);
 }
+
+export function getStandsByRarityCategory(rarity: string): Stand[] {
+  return standsData.filter(stand => stand.rarity === rarity);
+}
