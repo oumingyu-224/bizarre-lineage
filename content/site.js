@@ -6,8 +6,8 @@
 const siteConfig = {
   name: "Bizarre Lineage",
   description: "Master Bizarre Lineage, the JoJo-inspired Roblox RPG where you unlock powerful Stands, battle bosses in Morioh, and dominate PvP combat.",
-  domain: "bizarrelineage.xyz",
-  url: "https://bizarrelineage.xyz/",
+  domain: "www.bizarrelineage.xyz",
+  url: "https://www.bizarrelineage.xyz/",
   email: "support@bizarrelineage.xyz",
   author: "Bizarre Lineage",
   social: {
