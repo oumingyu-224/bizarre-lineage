@@ -50,18 +50,18 @@ export default function HomePage() {
           {homeContent.hero.description}
         </p>
 
-        {/* YouTube Video */}
+        {/* YouTube Video - lazy loaded for performance */}
         <div className="mb-8 flex justify-center">
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/aU_TonQzrXQ?si=uxOFBiZGcNGEeVqx&start=1"
+            src="https://www.youtube.com/embed/aU_TonQzrXQ?si=uxOFBiZGcNGEeVqx&start=1&rel=0"
             title="Bizarre Lineage Gameplay Trailer - JoJo Roblox RPG"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             loading="lazy"
             className="rounded-lg shadow-lg max-w-full"
-            style={{ aspectRatio: '16/9' }}
+            style={{ aspectRatio: '16/9', width: '100%', maxWidth: '560px' }}
           />
         </div>
 

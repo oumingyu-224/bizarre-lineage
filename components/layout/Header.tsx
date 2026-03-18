@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { theme } from "@/config/theme";
 import { navigationConfig } from "@/content/navigation";
 import { siteConfig } from "@/content/site";
@@ -33,9 +34,12 @@ export function Header() {
         {/* Logo and Title */}
         <div className={theme.header.layout.logo.wrapper}>
           <Link href="/">
-            <img
+            <Image
               src={layout.header.logo.src}
-              alt={siteConfig.name}
+              alt={`${siteConfig.name} Logo`}
+              width={40}
+              height={40}
+              priority
               className={cn(
                 layout.header.logo.size,
                 theme.header.layout.logo.image,
