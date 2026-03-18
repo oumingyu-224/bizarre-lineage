@@ -3,6 +3,7 @@ import { standsContent } from '@/content/pages/stands';
 import { getStandsByRarityCategory } from '@/data/stands';
 import Script from 'next/script';
 import { generateBreadcrumbSchema } from '@/app/schema';
+import { BreadcrumbNav } from '@/components/ui/breadcrumb-nav';
 
 export const metadata: Metadata = {
   title: standsContent.seo.title,
@@ -27,6 +28,7 @@ export default function StandsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)) }}
       />
       <div className="container mx-auto px-4 py-8">
+      <BreadcrumbNav items={[{ name: 'Stands', href: '/stands' }]} />
       <h1 className="text-4xl font-bold mb-4">{standsContent.title}</h1>
       <p className="text-lg text-muted-foreground mb-8">{standsContent.intro.text}</p>
 

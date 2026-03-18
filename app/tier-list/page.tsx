@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import { tierListContent } from '@/content/pages/tier-list';
+import Script from 'next/script';
+import { generateBreadcrumbSchema } from '@/app/schema';
+import { BreadcrumbNav } from '@/components/ui/breadcrumb-nav';
 
 export const metadata: Metadata = {
   title: tierListContent.seo.title,
@@ -11,8 +14,20 @@ export const metadata: Metadata = {
 };
 
 export default function TierListPage() {
+  const breadcrumbItems = [
+    { name: 'Home', url: '' },
+    { name: 'Tier List', url: '/tier-list' }
+  ];
+
   return (
-    <div className="container mx-auto px-4 py-8">
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)) }}
+      />
+      <div className="container mx-auto px-4 py-8">
+      <BreadcrumbNav items={[{ name: 'Tier List', href: '/tier-list' }]} />
       <h1 className="text-4xl font-bold mb-4">{tierListContent.title}</h1>
       <p className="text-lg text-muted-foreground mb-8">{tierListContent.description}</p>
 
@@ -73,5 +88,6 @@ export default function TierListPage() {
         </section>
       </div>
     </div>
+    </>
   );
 }

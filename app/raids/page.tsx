@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import { raidsContent } from '@/content/pages/raids';
+import Script from 'next/script';
+import { generateBreadcrumbSchema } from '@/app/schema';
+import { BreadcrumbNav } from '@/components/ui/breadcrumb-nav';
 
 export const metadata: Metadata = {
   title: raidsContent.seo.title,
@@ -11,8 +14,20 @@ export const metadata: Metadata = {
 };
 
 export default function RaidsPage() {
+  const breadcrumbItems = [
+    { name: 'Home', url: '' },
+    { name: 'Raids', url: '/raids' }
+  ];
+
   return (
-    <div className="container mx-auto px-4 py-8">
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)) }}
+      />
+      <div className="container mx-auto px-4 py-8">
+      <BreadcrumbNav items={[{ name: 'Raids', href: '/raids' }]} />
       <h1 className="text-4xl font-bold mb-4">{raidsContent.title}</h1>
       <p className="text-lg text-muted-foreground mb-8">{raidsContent.description}</p>
 
@@ -114,5 +129,6 @@ export default function RaidsPage() {
         </ul>
       </section>
     </div>
+    </>
   );
 }

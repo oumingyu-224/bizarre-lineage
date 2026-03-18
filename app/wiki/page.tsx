@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import { wikiContent } from '@/content/pages/wiki';
+import Script from 'next/script';
+import { generateBreadcrumbSchema } from '@/app/schema';
+import { BreadcrumbNav } from '@/components/ui/breadcrumb-nav';
 
 export const metadata: Metadata = {
   title: wikiContent.seo.title,
@@ -11,8 +14,20 @@ export const metadata: Metadata = {
 };
 
 export default function WikiPage() {
+  const breadcrumbItems = [
+    { name: 'Home', url: '' },
+    { name: 'Wiki', url: '/wiki' }
+  ];
+
   return (
-    <div className="container mx-auto px-4 py-8">
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)) }}
+      />
+      <div className="container mx-auto px-4 py-8">
+      <BreadcrumbNav items={[{ name: 'Wiki', href: '/wiki' }]} />
       <h1 className="text-4xl font-bold mb-4">{wikiContent.title}</h1>
       <p className="text-lg text-muted-foreground mb-8">{wikiContent.description}</p>
 
@@ -51,5 +66,6 @@ export default function WikiPage() {
         </ul>
       </section>
     </div>
+    </>
   );
 }

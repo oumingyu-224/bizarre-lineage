@@ -3,6 +3,7 @@ import { codesContent } from '@/content/pages/codes';
 import { getActiveCodes, getExpiredCodes } from '@/data/codes';
 import Script from 'next/script';
 import { generateBreadcrumbSchema } from '@/app/schema';
+import { BreadcrumbNav } from '@/components/ui/breadcrumb-nav';
 
 export const metadata: Metadata = {
   title: codesContent.seo.title,
@@ -30,6 +31,7 @@ export default function CodesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)) }}
       />
       <div className="container mx-auto px-4 py-8">
+      <BreadcrumbNav items={[{ name: 'Codes', href: '/codes' }]} />
       <h1 className="text-4xl font-bold mb-4">{codesContent.title}</h1>
       <p className="text-lg text-muted-foreground mb-8">{codesContent.description}</p>
 
