@@ -1,4 +1,4 @@
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/content/site";
 
 export const generateGameSchema = (game: {
   title: string;
@@ -81,6 +81,49 @@ export const generateRatingSchema = (rating: number, votes: number) => {
       "priceCurrency": "USD"
     }
   };
+};
+
+export const generateBreadcrumbSchema = (items: Array<{ name: string; url: string }>) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": `${siteConfig.url}${item.url}`
+    }))
+  };
+};
+
+export const faqSchema = (items: readonly { question: string; answer: string }[] | Array<{ question: string; answer: string }>) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": items.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+};
+
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": siteConfig.name,
+  "url": siteConfig.url,
+  "logo": `${siteConfig.url}${siteConfig.images.og}`,
+  "description": siteConfig.description,
+  "sameAs": [
+    `https://twitter.com/${siteConfig.social.twitter}`,
+    `https://facebook.com/${siteConfig.social.facebook}`,
+    siteConfig.discordUrl,
+    siteConfig.robloxGameUrl
+  ]
 };
 
 

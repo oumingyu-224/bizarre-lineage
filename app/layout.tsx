@@ -11,13 +11,13 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} - Wiki, Codes, Stock & More`,
+    default: `${siteConfig.name} - Complete Guide & Resources`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: siteConfig.metadata.keywords,
   openGraph: {
-    title: `${siteConfig.name} - Wiki, Codes, Stock & More`,
+    title: `${siteConfig.name} - Complete Guide & Resources`,
     description: siteConfig.description,
     type: 'website',
     url: siteConfig.url,
@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.images.og,
+        width: 1200,
+        height: 630,
         alt: `${siteConfig.name} Logo`,
       }
     ],
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${siteConfig.name} - Wiki, Codes, Stock & More`,
+    title: `${siteConfig.name} - Complete Guide & Resources`,
     description: siteConfig.description,
     images: [siteConfig.images.og],
   },

@@ -3,6 +3,8 @@ import { homeContent } from '@/content/pages/home';
 import { FAQ } from '@/components/home/FAQ';
 import { Comments } from '@/components/home/Comments';
 import Link from 'next/link';
+import Script from 'next/script';
+import { websiteSchema, generateRatingSchema, faqSchema, organizationSchema } from '@/app/schema';
 
 export const metadata: Metadata = {
   title: homeContent.seo.title,
@@ -15,7 +17,30 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
+    <>
+      {/* Schema.org structured data */}
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <Script
+        id="rating-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateRatingSchema(4.8, 1250)) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(homeContent.faq.items)) }}
+      />
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-5xl font-bold mb-4">{homeContent.hero.title}</h1>
@@ -31,8 +56,10 @@ export default function HomePage() {
             width="560"
             height="315"
             src="https://www.youtube.com/embed/aU_TonQzrXQ?si=uxOFBiZGcNGEeVqx&start=1"
-            title="YouTube video player"
+            title="Bizarre Lineage Gameplay Trailer - JoJo Roblox RPG"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            loading="lazy"
             className="rounded-lg shadow-lg max-w-full"
             style={{ aspectRatio: '16/9' }}
           />
@@ -99,5 +126,6 @@ export default function HomePage() {
         />
       )}
     </div>
+    </>
   );
 }

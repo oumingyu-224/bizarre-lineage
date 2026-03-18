@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { standsContent } from '@/content/pages/stands';
 import { getStandsByRarityCategory } from '@/data/stands';
+import Script from 'next/script';
+import { generateBreadcrumbSchema } from '@/app/schema';
 
 export const metadata: Metadata = {
   title: standsContent.seo.title,
@@ -12,8 +14,19 @@ export const metadata: Metadata = {
 };
 
 export default function StandsPage() {
+  const breadcrumbItems = [
+    { name: 'Home', url: '' },
+    { name: 'Stands', url: '/stands' }
+  ];
+
   return (
-    <div className="container mx-auto px-4 py-8">
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbItems)) }}
+      />
+      <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-4">{standsContent.title}</h1>
       <p className="text-lg text-muted-foreground mb-8">{standsContent.intro.text}</p>
 
@@ -53,5 +66,6 @@ export default function StandsPage() {
         })}
       </div>
     </div>
+    </>
   );
 }

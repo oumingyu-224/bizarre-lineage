@@ -6,7 +6,7 @@
 export const homeContent = {
   hero: {
     title: "Bizarre Lineage",
-    subtitle: "Wiki, Codes, Tier List & More",
+    subtitle: "Complete Guide, Codes & Resources",
     description: "Master Bizarre Lineage, the JoJo-inspired Roblox RPG where you unlock powerful Stands, explore Morioh, battle raid bosses, and dominate PvP combat. Get the latest codes, tier lists, and complete guides!",
     cta: {
       primary: {
@@ -63,7 +63,7 @@ export const homeContent = {
       icon: "leaf",
     },
     {
-      title: "Wiki & Guides",
+      title: "Game Guides",
       description: "Learn game mechanics, stats, and progression",
       href: "/wiki",
       icon: "skull",
@@ -107,19 +107,21 @@ export const homeContent = {
   },
 
   seo: {
-    title: "Bizarre Lineage - Wiki, Codes, Tier List & Stand Guide",
+    title: "Bizarre Lineage - Complete Guide, Codes & Tier List",
     description: "Master Bizarre Lineage, the JoJo-inspired Roblox RPG where you unlock powerful Stands, explore Morioh, battle raid bosses, and dominate PvP combat. Get the latest codes, tier lists, and complete guides!",
     keywords: [
       "Bizarre Lineage",
+      "Bizarre Lineage game",
+      "Bizarre Lineage Roblox",
       "Bizarre Lineage codes",
       "Bizarre Lineage tier list",
-      "Bizarre Lineage wiki",
       "Bizarre Lineage stands",
+      "Bizarre Lineage guide",
       "Bizarre Lineage trello",
       "Bizarre Lineage discord",
-      "Roblox JoJo game",
-      "Stand tier list",
-      "Bizarre Lineage guide",
+      "JoJo Roblox game",
+      "Roblox Stand game",
+      "Bizarre Lineage tips",
     ] as string[],
   },
 } as const;
